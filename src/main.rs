@@ -5,7 +5,7 @@ use std::io;
 fn main() {
     println!("Rust Number Guessing Game!");
 
-    let secret_number: u32 = rand::thread_rng().gen_range(1..=100);
+    let secret_number: u8 = rand::thread_rng().gen_range(1..=100);
 
     // println!("The secret number is: {secret_number}");
 
@@ -20,7 +20,7 @@ fn main() {
 
         // let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
-        let guess: u32 = match guess.trim().parse() {
+        let guess: u8 = match guess.trim().parse() {
             Ok(numb) => numb,
             Err(_) => continue,
         };
